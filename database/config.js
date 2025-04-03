@@ -1,10 +1,10 @@
 
 const mongoose = require('mongoose');       //importar BBDD MongoDB
 
-const dbConnection = () =>{
+const dbConnection = async () =>{
 
     try {
-        mongoose.connect('mongodb+srv://mern_user:.pVRFNv7-63LH7A@calendardb.lhyrw9x.mongodb.net/mern_calendar');
+        await mongoose.connect(process.env.DB_CNN);
         console.log('DB Online');
 
     } catch (error) {
