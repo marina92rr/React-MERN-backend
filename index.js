@@ -1,7 +1,7 @@
 
 
 const express = require('express');     //Importacion de express
-require('dotenv').config();  // Cargar las variables de entorno
+require('dotenv').config();     //Para ejecutar el archivo .env
 const cors = require('cors');
 const {dbConnection} = require('./database/config');        //
 
