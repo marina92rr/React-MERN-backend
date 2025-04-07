@@ -1,4 +1,4 @@
-
+const path = require('path');
 
 const express = require('express');     //Importacion de express
 require('dotenv').config();     //Para ejecutar el archivo .env
@@ -27,6 +27,10 @@ app.use( express.json());
 app.use('/api/auth', require('./routes/auth') );
 app.use('/api/events', require('./routes/events') );
 //CRUD: eventos
+
+app.use( '*', (req, res) => {
+    res.sendFile(Path2D.join(__dirname, 'public/index.html'));
+})
 
 //Escuchar peticiones
 app.listen( process.env.PORT, () => {
